@@ -39,9 +39,7 @@
     </style>
   </head>
   <body>
-    <header>
-      <h1>Fitness Tracker</h1>
-    </header>
+    <header><h1>Fitness Tracker</h1></header>
     <main class="container mt-4">
       <section class="tracker mb-4">
         <h2>Activity Tracker</h2>
@@ -70,6 +68,46 @@
               type="number"
               id="activity-duration"
               name="duration"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="exercise-name">Exercise Name:</label>
+            <input
+              type="text"
+              id="exercise-name"
+              name="exercise_name"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="muscle-group">Muscle Group:</label>
+            <input
+              type="text"
+              id="muscle-group"
+              name="muscle_group"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="sets">Sets:</label>
+            <input
+              type="number"
+              id="sets"
+              name="sets"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="reps">Reps:</label>
+            <input
+              type="number"
+              id="reps"
+              name="reps"
               class="form-control"
               required
             />
