@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness Tracker</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #333;
+        color: #fff;
+      }
+      header {
+        background-color: #4caf50;
+        color: white;
+        padding: 1em 0;
+        text-align: center;
+      }
+      .tracker,
+      .log-activity {
+        background-color: #444;
+        padding: 1em;
+        margin: 1em auto;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        max-width: 800px;
+      }
+      .btn-primary {
+        background-color: #4caf50;
+        border: none;
+      }
+      .btn-danger {
+        background-color: #e74c3c;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Fitness Tracker</h1>
+    </header>
+    <main class="container mt-4">
+      <section class="tracker mb-4">
+        <h2>Activity Tracker</h2>
+        <img
+          src="{{ url_for('graph') }}"
+          alt="Contribution Graph"
+          class="img-fluid"
+        />
+      </section>
+      <section class="log-activity">
+        <h2>Log Activity</h2>
+        <form method="POST">
+          <div class="form-group">
+            <label for="activity-date">Date:</label>
+            <input
+              type="date"
+              id="activity-date"
+              name="date"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="activity-duration">Duration (minutes):</label>
+            <input
+              type="number"
+              id="activity-duration"
+              name="duration"
+              class="form-control"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Log Activity</button>
+          <a href="{{ url_for('reset') }}" class="btn btn-danger">Reset</a>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
