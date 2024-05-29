@@ -13,12 +13,14 @@
         background-color: #333;
         color: #fff;
       }
+
       header {
         background-color: #4caf50;
         color: white;
         padding: 1em 0;
         text-align: center;
       }
+
       .tracker,
       .log-activity {
         background-color: #444;
@@ -28,10 +30,12 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         max-width: 800px;
       }
+
       .btn-primary {
         background-color: #4caf50;
         border: none;
       }
+
       .btn-danger {
         background-color: #e74c3c;
         border: none;
@@ -43,6 +47,7 @@
     <main class="container mt-4">
       <section class="tracker mb-4">
         <h2>Activity Tracker</h2>
+        <!-- Image tag for displaying the activity graph -->
         <img
           src="{{ url_for('graph') }}"
           alt="Contribution Graph"
@@ -51,6 +56,7 @@
       </section>
       <section class="log-activity">
         <h2>Log Activity</h2>
+        <!-- Form for logging activity -->
         <form method="POST">
           <div class="form-group">
             <label for="activity-date">Date:</label>
@@ -113,6 +119,7 @@
             />
           </div>
           <button type="submit" class="btn btn-primary">Log Activity</button>
+          <!-- Button to reset activity data -->
           <a href="{{ url_for('reset') }}" class="btn btn-danger">Reset</a>
         </form>
       </section>
