@@ -30,12 +30,7 @@ Fitometer is a fitness tracking web application built using Flask. It allows use
     source venv/bin/activate  # On Windows use `venv\Scripts\activate`
     ```
 
-3. Install the required packages:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4. Set up your SQL Server database and create the necessary table:
+3. Set up your SQL Server database and create the necessary table:
     ```sql
     CREATE DATABASE Fitometer;
 
@@ -52,7 +47,7 @@ Fitometer is a fitness tracking web application built using Flask. It allows use
     );
     ```
 
-5. Configure the database connection in `app.py`:
+4. Configure the database connection in `app.py`:
     ```python
     connection = pyodbc.connect(
         "Driver={SQL Server};"
@@ -66,7 +61,7 @@ Fitometer is a fitness tracking web application built using Flask. It allows use
 
 1. Run the Flask application:
     ```bash
-    flask run
+    python app.py
     ```
 
 2. Open your web browser and go to `http://127.0.0.1:5000`.
