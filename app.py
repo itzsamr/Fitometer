@@ -78,10 +78,13 @@ class FitnessTrackerDB:
             y = list(counts.values())
 
             fig, ax = plt.subplots(figsize=(10, 2))
-            ax.bar(x, y, width=1, color="green")
+            ax.plot(x, y, color="green")
             ax.set_xlim(start_date, today)
             ax.set_ylim(0, max(y) + 1e-5)
-            ax.axis("off")
+            ax.set_xlabel("Date")
+            ax.set_ylabel("Duration (minutes)")
+            ax.set_title("Activity Duration Over Time")
+            ax.grid(True)
 
             img = io.BytesIO()
             plt.savefig(img, format="png", bbox_inches="tight")
